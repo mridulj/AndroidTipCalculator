@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="46dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="@string/et_amount_text" />
+
+    <Button
+        android:id="@+id/btnLow"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etAmount"
+        android:layout_below="@+id/etAmount"
+        android:layout_marginTop="65dp"
+        android:onClick="onSubmitLow"
+        android:text="@string/btn_low_per_text" />
+
+    <Button
+        android:id="@+id/btnMed"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnLow"
+        android:layout_alignBottom="@+id/btnLow"
+        android:layout_toRightOf="@+id/btnLow"
+        android:onClick="onSubmitMed"
+        android:text="@string/btn_med_per_text" />
+
+    <Button
+        android:id="@+id/btnHigh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnMed"
+        android:layout_alignBottom="@+id/btnMed"
+        android:layout_toRightOf="@+id/btnMed"
+        android:onClick="onSubmitHigh"
+        android:text="@string/btn_high_per_text" />
+
+    <TextView
+        android:id="@+id/tvLabelTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btnHigh"
+        android:layout_marginBottom="105dp"
+        android:layout_marginRight="18dp"
+        android:text="@string/tv_tip_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvLabelOutTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvLabelTip"
+        android:layout_alignBottom="@+id/tvLabelTip"
+        android:layout_toRightOf="@+id/tvLabelTip"
+        android:text="@string/tv_tipresult_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etCustomtip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnLow"
+        android:layout_alignRight="@+id/btnHigh"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="@string/et_tip_text"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnCustomtip"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etCustomtip"
+        android:layout_alignLeft="@+id/tvLabelOutTip"
+        android:onClick="onSubmit"
+        android:text="@string/btn_customtip_text" />
+
+</RelativeLayout>
